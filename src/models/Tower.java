@@ -6,9 +6,6 @@ public class Tower extends Piece{
     }
 
     public boolean movedValid(Integer newY, Integer newX) {
-        // logic
-        this.setY(newY);
-        this.setX(newX);
-        return false;
+        return Math.abs(this.getY() - newY) != Math.abs(this.getX() - newX);
     }
 }
