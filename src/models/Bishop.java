@@ -7,12 +7,6 @@ public class Bishop extends Piece{
     }
 
     public boolean movedValid(Integer newY, Integer newX) {
-        // logic
-        if (this.getColor() == PieceColor.BLACK) {
-            return true;
-        } else {
-
-        }
-        return false;
+        return Math.abs(this.getY() - newY) == Math.abs(this.getX() - newX);
     }
 }

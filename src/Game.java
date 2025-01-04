@@ -28,8 +28,8 @@ public class Game  {
     initialPiece[7][7] = new Tower(7, 7, PieceColor.BLACK);
     initialPiece[7][1] = new Horse(7, 1, PieceColor.BLACK);
     initialPiece[7][6] = new Horse(7, 6, PieceColor.BLACK);
-    initialPiece[7][2] = new Bishop(0, 2, PieceColor.BLACK);
-    initialPiece[7][5] = new Bishop(0, 5, PieceColor.BLACK);
+    initialPiece[7][2] = new Bishop(7, 2, PieceColor.BLACK);
+    initialPiece[7][5] = new Bishop(7, 5, PieceColor.BLACK);
     initialPiece[7][3] = new King(7, 3, PieceColor.BLACK);
     initialPiece[7][4] = new Queen(7, 4, PieceColor.BLACK);
     for (int x = 0; x < 8; x++){

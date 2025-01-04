@@ -35,7 +35,7 @@ public class Board extends JPanel {
     }else{
       System.out.println(row);
       System.out.println(col);
-      System.out.println(selectedPiece.movedValid(row, col));
+      System.out.println("movedValid: "+selectedPiece.movedValid(row, col));
       if(board[row][col] != null && selectedPiece.getColor().equals(board[row][col].getColor())){
         selectedPiece = null;
         selectedRow = -1;
