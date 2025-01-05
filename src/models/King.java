@@ -7,9 +7,9 @@ public class King extends Piece{
   }
 
   public boolean movedValid(Integer newY, Integer newX) {
-    // logic
-    this.setY(newY);
-    this.setX(newX);
-    return false;
+
+    return (newY == this.getY() + 1 || newY == this.getY() - 1)
+            || (newX == this.getX() + 1 || newX == this.getX() - 1)
+            && Math.abs(this.getY() - newY) != Math.abs(this.getX() - newX);
   }
 }
