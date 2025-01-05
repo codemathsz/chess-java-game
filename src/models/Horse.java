@@ -1,14 +1,13 @@
 package models;
 
+import utils.Utils;
+
 public class Horse extends Piece{
     public Horse(Integer y, Integer x, PieceColor color) {
         super(y, x, color);
     }
 
     public boolean movedValid(Integer newY, Integer newX) {
-        // logic
-        this.setY(newY);
-        this.setX(newX);
-        return false;
+        return Utils.isMovementL(newY, newX, this.getY(), this.getX());
     }
 }

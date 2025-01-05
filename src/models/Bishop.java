@@ -1,5 +1,7 @@
 package models;
 
+import utils.Utils;
+
 public class Bishop extends Piece{
 
     public Bishop(Integer y, Integer x, PieceColor color) {
@@ -7,6 +9,6 @@ public class Bishop extends Piece{
     }
 
     public boolean movedValid(Integer newY, Integer newX) {
-        return Math.abs(this.getY() - newY) == Math.abs(this.getX() - newX);
+        return Utils.isDiagonalMove(newY, newX, this.getY(), this.getX());
     }
 }

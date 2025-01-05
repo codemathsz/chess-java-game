@@ -1,5 +1,7 @@
 package models;
 
+import utils.Utils;
+
 public class King extends Piece{
   
   public King(Integer y, Integer x, PieceColor color){
@@ -8,8 +10,7 @@ public class King extends Piece{
 
   public boolean movedValid(Integer newY, Integer newX) {
 
-    return (newY == this.getY() + 1 || newY == this.getY() - 1)
-            || (newX == this.getX() + 1 || newX == this.getX() - 1)
-            && Math.abs(this.getY() - newY) != Math.abs(this.getX() - newX);
+    return Utils.isMovementOneHome(newY, newX, this.getY(), this.getX())
+            && !Utils.isDiagonalMove(newY, newX, this.getY(), this.getX());
   }
 }
