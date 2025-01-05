@@ -9,10 +9,6 @@ public class Queen extends Piece{
     }
 
     public boolean movedValid(Integer newY, Integer newX) {
-        // logic
-        if( Utils.isMovementL(newY, newX, this.getY(), this.getX())){
-            return false;
-        }
-        return true;
+        return !Utils.isMovementL(newY, newX, this.getY(), this.getX());
     }
 }
